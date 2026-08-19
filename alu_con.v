@@ -5,14 +5,14 @@ input [6:0] funct7,
 output reg [2:0] alu_ctrl
 );
 
-localparam  ADD_OP = 3'b000,
-            SUB_OP = 3'b001,
-            AND_OP = 3'b010,
-            OR_OP  = 3'b011,
-            XOR_OP = 3'b100,
-            SLL_OP = 3'b101,
-            SLT_OP = 3'b110,
-            SRL_OP = 3'b111;
+localparam [2:0]    ADD_OP = 3'b000,
+                    SUB_OP = 3'b001,
+                    AND_OP = 3'b010,
+                    OR_OP  = 3'b011,
+                    XOR_OP = 3'b100,
+                    SLL_OP = 3'b101,
+                    SLT_OP = 3'b110,
+                    SRL_OP = 3'b111;
 
 always @(*) begin
     alu_ctrl = ADD_OP;

@@ -58,13 +58,15 @@ always @(*) begin
         7'b1100011 : //B-type
         begin
             Branch      = 1'b1;
-            ALUOp       = 2'b01;
+            ALUOp       = 2'b10;
         end
 
         7'b1101111 : //JAL
         begin
             RegWrite    = 1'b1;
             JUMP        = 1'b1;
+            ALUSrc_A    = 1'b1;
+            ALUSrc_B    = 1'b1;
             MemtoReg    = 2'b10;
         end
 
